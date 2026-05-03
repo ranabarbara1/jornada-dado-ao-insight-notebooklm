@@ -36,7 +36,7 @@ Teste 1 — Mudança de profundidade
 > "O que é análise de dados?"
 
 **Resposta obtida:**
-![Resposta - Prompt Simples](prints/o-que-e-analise-dados)
+![Resposta - Prompt Simples](prints/o-que-e-analise-dados.png)
 
 A resposta retornou um conteúdo completo, com processo de análise, os quatro tipos (descritiva, diagnóstica, preditiva e prescritiva) e a pirâmide DIKW — tudo bem organizado em listas. Tecnicamente correta, mas no mesmo padrão visual de qualquer outra resposta da ferramenta.
 
@@ -47,7 +47,7 @@ Teste 2 — Mudança de formato
 > com colunas para: etapa, objetivo, exemplo prático e métrica associada."
 
 **Resposta obtida:**
-![Resposta - Prompt com Formato Definido](prints/o-que-e-analise-dados-v2)
+![Resposta - Prompt com Formato Definido](prints/o-que-e-analise-dados-v2.png)
 
 O mesmo conteúdo foi reestruturado em uma tabela com seis etapas detalhadas, cada uma com objetivo, exemplo prático e métrica associada. A informação não mudou — o que mudou foi a forma de acessá-la, tornando a comparação entre etapas muito mais direta e útil para revisão.
 
