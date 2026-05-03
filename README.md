@@ -16,32 +16,48 @@ O material aborda a análise de dados como um fluxo integrado, no qual técnica,
 - Utilizar dados operacionais como apoio à análise e monitoramento;
 
 ## 📚 Curadoria de Fontes
-https://www.kufunda.net/publicdocs/Storytelling%20com%20Dados%20(Cole%20Nussbaumer%20Knaflic%20[Knaflic%20etc.).pdf
-https://www.geeksforgeeks.org/data-analysis/six-steps-of-data-analysis-process/
-https://barc.com/data-culture/
-https://studyonline.unsw.edu.au/blog/descriptive-predictive-prescriptive-analytics
-https://www.ontotext.com/knowledgehub/fundamentals/dikw-pyramid/
+- https://www.kufunda.net/publicdocs/Storytelling%20com%20Dados%20(Cole%20Nussbaumer%20Knaflic%20[Knaflic%20etc.).pdf
+- https://www.geeksforgeeks.org/data-analysis/six-steps-of-data-analysis-process/
+- https://barc.com/data-culture/
+- https://studyonline.unsw.edu.au/blog/descriptive-predictive-prescriptive-analytics
+- https://www.ontotext.com/knowledgehub/fundamentals/dikw-pyramid/
 
 ## 🧠 Engenharia de Prompts e “Cicatrizes” do Processo
-No decorrer da criação deste material, a elaboração das instruções passou por várias revisões até gerar respostas mais pertinentes e detalhadas. A princípio, o método empregado focava mais em logs e decisões, com questionamentos objetivos como:
+No decorrer da criação deste material, a elaboração das instruções passou por 
+várias revisões até gerar respostas mais pertinentes e detalhadas.
 
-Prompt inicial:
-“Como logs de sistema podem ser utilizados para tomada de decisão em negócios?”
+A primeira descoberta importante foi que, devido ao volume e à qualidade das fontes carregadas no NotebookLM, mesmo prompts simples e diretos retornavam respostas bem estruturadas e tecnicamente ricas — desde que o tema estivesse coberto pelas fontes. Isso revelou um comportamento relevante da ferramenta: a qualidade das fontes cria um "teto alto" para qualquer resposta, mas também padroniza o formato de saída, geralmente em listas numeradas com subtítulos.
 
-Resposta obtida (resumida):
-“Logs de sistema podem ajudar a identificar erros, monitorar desempenho e melhorar a segurança. Empresas podem usar essas informações para tomar decisões mais informadas.”
+Esse padrão único, embora completo, pode dificultar o aprendizado dependendo do perfil do leitor. Para quem aprende melhor com exemplos práticos comparativos, uma lista genérica tem menos valor do que uma tabela estruturada. Nesse sentido, a engenharia de prompts deixou de ser apenas uma ferramenta para melhorar a qualidade do conteúdo e passou a ser um recurso para adaptar o formato da entrega ao estilo de aprendizagem desejado.
 
-A resposta, embora tecnicamente certa, pareceu vaga e superficial, carecendo de especificidades técnicas, exemplos concretos ou uma ligação mais evidente com a estratégia empresarial.
-Observando esse comportamento, observou-se que falha não residia somente na resposta da IA, mas também na maneira como o problema estava sendo apresentado. A questão limitava o alcance e não incentivava um pensamento mais abrangente. Com base nisso, a estratégia foi revista, expandindo o contexto do comando para abranger todo o processo analítico, e não apenas o uso individual de logs:
+Teste 1 — Mudança de profundidade
 
-Prompt refinado:
-“Explique como logs de sistema podem ser integrados ao processo completo de análise de dados (coleta, tratamento, análise e comunicação) para apoiar a tomada de decisão estratégica em uma empresa. Inclua exemplos práticos e possíveis métricas.”
+**Prompt inicial:**
+> "O que é análise de dados?"
 
-Resposta obtida (resumida):
-“Logs de sistema podem ser integrados ao ciclo analítico para apoiar decisões de negócio. O processo começa na coleta e tratamento, onde os dados são estruturados (ex: parsing) e organizados para análise. Na etapa de análise, é possível identificar padrões, falhas e anomalias, gerando insights tanto técnicos quanto estratégicos, como comportamento de usuários ou problemas de performance. Por fim, na comunicação, os dados são apresentados por meio de visualizações e dashboards, facilitando a compreensão e a tomada de decisão. Na prática, os logs contribuem para áreas como segurança, performance, produto e operações, transformando registros técnicos em informações úteis para o negócio.”
+**Resposta obtida:**
+![Resposta - Prompt Simples](prints/o-que-e-analise-dados)
 
-Com a reformulação, a resposta passou a apresentar: Maior profundidade técnica, Integração com o processo analítico completo, Conexão com indicadores e impacto no negócio e Estrutura mais próxima da realidade profissional. Demonstrando que a qualidade da resposta está diretamente ligada à qualidade do prompt. Ao explorar o contexto e deixar mais claro o objetivo analítico, foi possível obter respostas mais estruturadas.
-Criar prompts eficazes vai além de simplesmente refinar a forma como se pergunta algo, exige uma reflexão profunda sobre o problema, abrangendo o cenário, a utilização prática e a meta da avaliação.
+A resposta retornou um conteúdo completo, com processo de análise, os quatro tipos (descritiva, diagnóstica, preditiva e prescritiva) e a pirâmide DIKW — tudo bem organizado em listas. Tecnicamente correta, mas no mesmo padrão visual de qualquer outra resposta da ferramenta.
+
+Teste 2 — Mudança de formato
+
+**Prompt refinado:**
+> "Explique o processo de análise de dados em formato de tabela comparativa, 
+> com colunas para: etapa, objetivo, exemplo prático e métrica associada."
+
+**Resposta obtida:**
+![Resposta - Prompt com Formato Definido](prints/o-que-e-analise-dados-v2)
+
+O mesmo conteúdo foi reestruturado em uma tabela com seis etapas detalhadas, cada uma com objetivo, exemplo prático e métrica associada. A informação não mudou — o que mudou foi a forma de acessá-la, tornando a comparação entre etapas muito mais direta e útil para revisão.
+
+Aprendizado consolidado
+A principal lição deste processo não foi que prompts elaborados geram respostas melhores — as fontes ricas já garantiam isso. O aprendizado real foi que **o prompt controla o formato da entrega**, e o formato impacta diretamente a experiência de aprendizado. Ao especificar a estrutura esperada (tabela, narrativa, lista comparativa), é possível transformar o mesmo conteúdo em diferentes ferramentas de estudo.
+
+Criar prompts eficazes exige, portanto, uma reflexão sobre três perguntas:
+- O que eu quero aprender?
+- Como eu aprendo melhor?
+- Qual formato de resposta serve melhor a esse objetivo?
 
 ## 🚀 Jornada do Dado ao Insight (Entrega Final)
 1. Resumo Estruturado
